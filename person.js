@@ -8,9 +8,6 @@ function Person(name, age) {
 	}
 }
 
-var person1 = new Person("alex", 27);
-person1.toString();
-
 
 // 1)toString function recreated each time(inefficient)
 //Solution: Prototypes
@@ -26,18 +23,4 @@ Person.prototype.changeAge = function(newAge) {
 	this.age = newAge;
 };
 
-var person2WithPrototype = new Person("alex", 27);
-person2WithPrototype.toString();
-person2WithPrototype.chagenAge(28);
-person2WithPrototype.toString(0);
-
-//to use this put in person.js
-//use module.exports()
-
-
-//module.exports = Person;
-
-
-//--------------------------------------------------
-
-//Module pattern
+module.exports = Person;
