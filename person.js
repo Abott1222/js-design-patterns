@@ -1,8 +1,9 @@
+var Repo = require("./personRepoModulePatternExample.js")
 
 //constructor pattern
-function Person(name, age) {
-	this.name = name;
-	this.age = age;
+function Person(data) {
+	this.name = data.name;
+	this.age = data.age;
 	this.toString = function() {
 		console.log(this.name + " " + this.age);
 	}
@@ -21,6 +22,9 @@ function Person(name, age) {
 
 Person.prototype.changeAge = function(newAge) {
 	this.age = newAge;
+	console.log("Changed age!");
+	// this === the person
+	Repo.save(this);
 };
 
 module.exports = Person;

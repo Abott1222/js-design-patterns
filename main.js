@@ -1,10 +1,10 @@
 var Person = require("./person");
 var Repo = require("./personRepoModulePatternExample");
 
-var person1 = new Person("bob", 100);
+var person1 = new Person({name:"bob", age:100});
 person1.toString();
 
-var person2 = new Person("alex", 27);
+var person2 = new Person({name:"alex", age:27});
 person2.toString();
 person2.changeAge(28);
 person2.toString(0);

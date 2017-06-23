@@ -15,6 +15,10 @@ var repo = function() {
 				name: "new task from db",
 				age: age
 			}
+		},
+
+		save: function(Person) {
+			console.log("Saving person: " + Person.name + " to the db!");
 		}
 
 	}
